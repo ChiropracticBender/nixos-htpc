@@ -77,7 +77,6 @@
       epiphany
       microsoft-edge
       git
-      grep
     ];
   };
 
