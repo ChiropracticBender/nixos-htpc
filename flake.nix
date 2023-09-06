@@ -3,8 +3,6 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-#    htpcrepo.url = "github:ChiropracticBender/nixos-htpc";
-#    htpcrepo.flake = true;
   };
 
   outputs = { self, nixpkgs }:

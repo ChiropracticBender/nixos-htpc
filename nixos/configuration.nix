@@ -1,14 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
+# test
 { inputs, config, pkgs, ... }:
 
 {
   imports = 
     [
       ./hardware-configuration.nix # include hardware scan
-      ./homemanager.nix # add home manager to system
+#      ./homemanager.nix # add home manager to system
       ./channels.nix # add channels to builds
       ./syncthing.nix # sync system
     ];
@@ -77,6 +77,7 @@
       epiphany
       microsoft-edge
       git
+      grep
     ];
   };
 
@@ -102,6 +103,7 @@
     kodi-wayland
     openvpn
     pkgs.syncthing
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
