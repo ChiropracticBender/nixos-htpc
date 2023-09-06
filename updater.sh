@@ -12,3 +12,5 @@ curl -s https://api.github.com/repos/ChiropracticBender/nixos-htpc/latest \
 
 #echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC
+
+#test code change
