@@ -8,7 +8,8 @@
   imports = 
     [
       ./hardware-configuration.nix # include hardware scan
-#      ./homemanager.nix # add channels to build
+      ./homemanager.nix # add home manager to system
+      ./channels.nix # add channels to builds
       ./syncthing.nix # sync system
     ];
 
