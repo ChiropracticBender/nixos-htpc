@@ -81,6 +81,9 @@
   users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
+    home-manager.users.htpc = { pkgs, ... }: {
+      
+    }
     packages = with pkgs; [
       microsoft-edge
       kodi-wayland
