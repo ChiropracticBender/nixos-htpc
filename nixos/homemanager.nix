@@ -6,8 +6,7 @@ let
 in
 {
   imports = [
-#    (import "${home-manager}/nixos")
-    < home-manager/nixos >
+    (import "${home-manager}/nixos")
   ];
   
 }
