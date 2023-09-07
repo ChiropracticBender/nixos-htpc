@@ -1,5 +1,7 @@
 ## UPDATE SYSTEM
 
+echo "Cleaning HTPC directory if exsisting"
+sudo rm -r /htpc
 echo "Entering NIX SHELL GIT"
 #nix-shell -p git
 echo "Cloning MASTER Repo"

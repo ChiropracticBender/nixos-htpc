@@ -1,5 +1,7 @@
 ## UPDATE SYSTEM
 
+echo "Cleaning HTPC dir"
+sudo rm -r /htpc
 echo "Entering NIX SHELL GIT"
 #nix-shell -p git
 echo "Cloning MASTER Repo"
@@ -18,9 +20,9 @@ sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC
 
 while true; do
     read -p "Do you wish to change/set account passwords? " yn
-    case $yn in 
+    case $yn in
         [Yy]* ) make install; break;;
-        [Nn]* ) ; exit;;
+        [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
