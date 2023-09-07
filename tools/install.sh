@@ -4,14 +4,14 @@
 #sudo rm -r /htpc
 echo "Entering NIX SHELL GIT"
 #nix-shell -p git
-echo "Cloning MASTER Repo"
-sudo git clone https://github.com/ChiropracticBender/nixos-htpc /htpc-tmp
 echo "Making/Checking htpc dir"
 sudo mkdir /htpc
+echo "Cloning MASTER Repo"
+sudo git clone https://github.com/ChiropracticBender/nixos-htpc tmp
 echo "Moving Files from downloaded repo to HTPC"
-sudo cp -r /htpc-tmp/* /htpc
+sudo cp -r ./tmp/* /htpc
 echo "Deleting temp files"
-sudo rm -r /htpc-tmp
+sudo rm -r ./tmp
 echo "Copying your hardware config to HTPC"
 sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 # NEEDS IF STATEMENT IS TRUE
