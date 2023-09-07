@@ -8,7 +8,7 @@
   imports = 
     [
       ./hardware-configuration.nix # include hardware scan
-      ./homemanager.nix # add home manager to system
+#      ./homemanager.nix # add home manager to system
       ./channels.nix # add channels to builds
       ./syncthing.nix # sync system
     ];
@@ -72,7 +72,6 @@
     isNormalUser = true;
     description = "developer";
     extraGroups = [ "networkmanager" "wheel" ];
-    password = "developer";
     packages = with pkgs; [
       kate
       epiphany
@@ -84,7 +83,6 @@
   users.users.kodi = {
     isNormalUser = true;
     description = "HTPC";
-    password = "tvrules";
     packages = with pkgs; [
       microsoft-edge
     ];
