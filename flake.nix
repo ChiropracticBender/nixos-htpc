@@ -7,8 +7,7 @@
 
   outputs = { self, nixpkgs }:
   let
-    system = "x86_64-linux";
-    version = builtins.substring 0 8 lastModifiedDate;
+    system = "x86_64-linux";    
     pkgs = import nixpkgs {
       inherit system;
       config = {
