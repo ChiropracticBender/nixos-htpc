@@ -103,7 +103,9 @@
     openvpn
     pkgs.syncthing
     pkgs.wget
+    pkgs.kodiPackages.youtube
   ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
