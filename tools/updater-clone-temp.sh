@@ -16,4 +16,17 @@ sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC
 
+while true; do
+    read -p "Do you wish to change/set account passwords? " yn
+    case $yn in 
+        [Yy]* ) make install; break;;
+        [Nn]* ) ; exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+echo "SET DEVELOPER PASSWORD"
+passwd developer
+echo "SET HTPC ACCOUNT PASSWORD"
+passwd kodi
 
