@@ -3,7 +3,7 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    git-htpc.url = "git+https://github.com/ChiropracticBender/nixos-htpc";
+    git-htpc.url = "git+https://github.com/ChiropracticBender/nixos-htpc?ref=branch&rev=fdc8ef970de2b4634e1b3dca296e1ed918459a9e";
     git-directory-htpc = "git+file:./htpc-tools/repo?shallow=1";
   };
 
