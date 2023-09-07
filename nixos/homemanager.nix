@@ -7,7 +7,7 @@ in
 {
   imports = [
 #    (import "${home-manager}/nixos")
-    <home-manager/nixos>
+    < home-manager/nixos >
   ];
   
 }
