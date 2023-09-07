@@ -78,7 +78,7 @@
     ];
   };
 
-  users.users.htpc = {
+  home-manager.users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
     packages = with pkgs; [
