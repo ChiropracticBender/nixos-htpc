@@ -102,7 +102,7 @@
     kodi-wayland
     openvpn
     pkgs.syncthing
-    wget
+    pkgs.wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
