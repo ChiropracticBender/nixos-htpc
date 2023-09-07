@@ -1,17 +1,17 @@
 ## UPDATE SYSTEM
 
-echo "Cleaning HTPC dir"
-sudo rm -r /htpc
+#echo "Cleaning HTPC dir"
+#sudo rm -r /htpc
 echo "Entering NIX SHELL GIT"
 #nix-shell -p git
 echo "Cloning MASTER Repo"
-sudo git clone https://github.com/ChiropracticBender/nixos-htpc temp
+sudo git clone https://github.com/ChiropracticBender/nixos-htpc /htpc-tmp
 echo "Making/Checking htpc dir"
 sudo mkdir /htpc
 echo "Moving Files from downloaded repo to HTPC"
-sudo cp -r ./temp/* /htpc
+sudo cp -r /htpc-tmp/* /htpc
 echo "Deleting temp files"
-sudo rm -r ./temp
+sudo rm -r /htpc-tmp
 echo "Copying your hardware config to HTPC"
 sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 # NEEDS IF STATEMENT IS TRUE
