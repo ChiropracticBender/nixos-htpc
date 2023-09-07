@@ -2,9 +2,9 @@ echo "copying master system to /htpc and /dev-htpc"
 sudo cp -r /etc/nixos/* /htpc/nixos
 sudo cp -r /etc/nixos/* /dev-htpc/nixos
 
-git add *
+sudo git add *
 # change this to require developer input
-git commit -m "System Generated from upgrade-repo.sh"
+sudo git commit -m "System Generated from upgrade-repo.sh"
 
 while true; do
     read -p "Do you wish to publish changes to Github? " yn
@@ -15,4 +15,4 @@ while true; do
     esac
 done
 
-git push
+sudo git push

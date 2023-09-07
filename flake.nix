@@ -1,6 +1,5 @@
 {
   description = "NixOS HTPC Developer Branch";
-  version = "0.0.7";
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
