@@ -72,7 +72,7 @@
     isNormalUser = true;
     description = "developer";
     extraGroups = [ "networkmanager" "wheel" ];
-    password = developer;
+    password = "developer";
     packages = with pkgs; [
       kate
       epiphany
@@ -84,7 +84,7 @@
   users.users.kodi = {
     isNormalUser = true;
     description = "HTPC";
-    password = tvrules;
+    password = "tvrules";
     packages = with pkgs; [
       microsoft-edge
     ];
