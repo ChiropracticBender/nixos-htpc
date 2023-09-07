@@ -6,15 +6,18 @@ echo "Entering NIX SHELL GIT"
 #nix-shell -p git
 echo "Making/Checking htpc dir"
 sudo mkdir /htpc
+sudo mkdir /htpc-tools
 echo "Cloning MASTER Repo"
 sudo git clone https://github.com/ChiropracticBender/nixos-htpc tmp
 echo "Moving Files from downloaded repo to HTPC"
 sudo cp -r tmp/* /htpc
+echo "Copying installer tool to HTPC-Tools"
+sudo cp -r tmp/tools/install.sh /htpc-tools/
 echo "Deleting temp files"
 sudo rm -r tmp
 echo "Copying your hardware config to HTPC"
 sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 # NEEDS IF STATEMENT IS TRUE
 echo "Applying Updates to HTPC"
-sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC
+sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace
 
