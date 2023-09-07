@@ -2,4 +2,7 @@
 
 Building a distributable HTPC OS on NIXOS
 
-## THIS IS NOT READY YET
+## ONLY USE THIS ON NON PRODUCTION MACHINES
+## HIGH CHANCE OF BREAKABLITY AS I TINKER WITH THIS CONCEPT
+
+Check the wiki for documentation.
