@@ -37,16 +37,15 @@
 
   ###################### KODI LOGIN
   # Desktop Environment.
-#  services.xserver.displayManager.defaultSession = "kodi";
+  services.xserver.displayManager.defaultSession = "kodi"; #sets kodi as the default launcher 
   services.xserver.displayManager.sddm.enable = true;
-#  services.xserver.desktopManager.kodi.enable = true; #kodi desktop enviroment (testing wayland login
+  services.xserver.desktopManager.kodi.enable = true; #kodi desktop enviroment (testing wayland login
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "kodi";
+  services.xserver.displayManager.autoLogin.user = "htpc";
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
   # STAND ALONE APPLICATION
   services.xserver.displayManager.lightdm.autoLogin.timeout = 3;
   services.xserver.desktopManager.plasma5.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -80,11 +79,12 @@
     ];
   };
 
-  users.users.kodi = {
+  users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
     packages = with pkgs; [
       microsoft-edge
+      kodi-wayland
     ];
   };
 
