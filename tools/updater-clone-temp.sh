@@ -1,9 +1,9 @@
 ## UPDATE SYSTEM
 
 echo "Entering NIX SHELL GIT"
-nix-shell -p git
+#nix-shell -p git
 echo "Cloning MASTER Repo"
-git clone git@github.com:ChiropracticBender/nixos-htpc.git temp
+git pull git@github.com:ChiropracticBender/nixos-htpc.git temp
 echo "Making/Checking htpc dir"
 mkdir /htpc
 echo "Moving Files from downloaded repo to HTPC"
