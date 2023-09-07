@@ -75,10 +75,11 @@
       epiphany
       microsoft-edge
       git
+      vscode
     ];
   };
 
-  home-manager.users.users.htpc = {
+  users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
     packages = with pkgs; [
