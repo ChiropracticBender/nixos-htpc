@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     git-htpc.url = "git+https://github.com/ChiropracticBender/nixos-htpc";
-    git-directory-htpc = "git+files:./htpc-tools/repo?shallow=1";
+    git-directory-htpc = "git+file:./htpc-tools/repo?shallow=1";
   };
 
   outputs = { self, nixpkgs }:
