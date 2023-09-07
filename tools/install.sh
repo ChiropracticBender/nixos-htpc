@@ -1,13 +1,15 @@
 ## UPDATE SYSTEM
+version="0.1"
+
 
 #echo "Cleaning HTPC dir"
 #sudo rm -r /htpc
 echo "Entering NIX SHELL GIT"
 #nix-shell -p git
-echo "Adding home manger channel"
+echo  "Adding home manger channel"
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
 sudo nix-channel --update
-echo "Making/Checking htpc dir"
+echo  "Making/Checking htpc dir"
 sudo mkdir /htpc
 sudo mkdir /htpc-tools
 echo "Cloning MASTER Repo"
