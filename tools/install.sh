@@ -19,7 +19,7 @@ sudo cp -r tmp/tools/install.sh /htpc-tools/
 echo "Deleting temp files"
 sudo rm -r tmp
 echo "Copying your hardware config to HTPC"
-sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
+sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos --impure
 # NEEDS IF STATEMENT IS TRUE
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace
