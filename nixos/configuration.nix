@@ -126,7 +126,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
 
   system.stateVersion = "23.05"; # Did you read the comment?
-  system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc"
+  system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc";
   # NIX FLAKES
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
