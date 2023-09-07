@@ -1,5 +1,3 @@
-version = "0.0.1";
-
 {
   description = "NixOS HTPC Developer Branch";
   
@@ -10,6 +8,7 @@ version = "0.0.1";
   outputs = { self, nixpkgs }:
   let
     system = "x86_64-linux";
+    version = "0.0.1";
     pkgs = import nixpkgs {
       inherit system;
       config = {
