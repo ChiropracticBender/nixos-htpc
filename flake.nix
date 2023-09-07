@@ -1,3 +1,5 @@
+version = "0.0.1";
+
 {
   description = "NixOS HTPC Developer Branch";
   
