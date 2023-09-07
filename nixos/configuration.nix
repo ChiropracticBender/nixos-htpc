@@ -10,7 +10,7 @@
       ./hardware-configuration.nix # include hardware scan
 #      ./homemanager.nix # add home manager to system
       ./channels.nix # add channels to builds
-#      ./syncthing.nix # sync system
+      ./syncthing.nix # sync system
     ];
 
   # Bootloader.
@@ -134,4 +134,8 @@
   # UNFREE SOFTWARE ALLOW
   # USING THIS FOR MICROSOFT EDGE
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    pkgs.kodiPackages.youtube = true;
+  };
+
 }
