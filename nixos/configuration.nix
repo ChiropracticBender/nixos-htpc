@@ -103,7 +103,8 @@
     pkgs.wget
   ];
 
-  services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [
+  services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
+    [
     osmc-skin
     ]);
 
@@ -123,20 +124,13 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   system.stateVersion = "23.05"; # Did you read the comment?
-
+  system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc"
   # NIX FLAKES
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # UNFREE SOFTWARE ALLOW
-  # USING THIS FOR MICROSOFT EDGE
   nixpkgs.config.allowUnfree = true;
-#   nixpkgs.config = {
-#     pkgs.kodiPackages.youtube = true;
-#   };
 
 }
