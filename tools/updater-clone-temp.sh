@@ -9,7 +9,7 @@ sudo mkdir /htpc
 echo "Moving Files from downloaded repo to HTPC"
 sudo cp -r ./temp/nixos-htlp/* /htpc
 echo "Deleting temp files"
-sudo rm -r /temp/nixos-htpc
+sudo rm -r ./temp
 # NEEDS IF STATEMENT IS TRUE
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC
