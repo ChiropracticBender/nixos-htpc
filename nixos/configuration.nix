@@ -101,8 +101,11 @@
     kodi-wayland
     openvpn
     pkgs.wget
-    pkgs.kodiPackages.youtube
   ];
+
+  services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [
+    osmc-skin
+    ]);
 
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -132,8 +135,8 @@
   # UNFREE SOFTWARE ALLOW
   # USING THIS FOR MICROSOFT EDGE
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config = {
-    pkgs.kodiPackages.youtube = true;
-  };
+#   nixpkgs.config = {
+#     pkgs.kodiPackages.youtube = true;
+#   };
 
 }
