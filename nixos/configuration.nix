@@ -10,7 +10,6 @@
       ./hardware-configuration.nix # include hardware scan
 #      ./homemanager.nix # add home manager to system
       ./channels.nix # add channels to builds
-      ./syncthing.nix # sync system
     ];
 
   # Bootloader.
@@ -101,7 +100,6 @@
     pkgs.home-manager
     kodi-wayland
     openvpn
-    pkgs.syncthing
     pkgs.wget
     pkgs.kodiPackages.youtube
   ];
