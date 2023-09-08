@@ -86,7 +86,7 @@
       microsoft-edge
       kodi-wayland
     ];
-  home-manager.users.eve = { pkgs, ... }: {
+  home-manager.users.htpc = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
     programs.kodi.datadir = "${config.xdg.dataHome}/htpc/kodi/htpc";
   };
