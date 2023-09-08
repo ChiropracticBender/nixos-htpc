@@ -89,7 +89,10 @@
   };
 
   home-manager.users.htpc = { pkgs, ... }: {
-    home.packages = [ pkgs.atool pkgs.httpie ];
+    home.packages = [ 
+      pkgs.atool 
+      pkgs.httpie 
+    ];
     programs.bash.enable = true;
   };
 
