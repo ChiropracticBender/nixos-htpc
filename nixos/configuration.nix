@@ -88,7 +88,7 @@
     ];
   home-manager.users.eve = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
-    programs.kodi.datadir = "${config.xdg.dataHome}/htpc/kodi/htpc"
+    programs.kodi.datadir = "${config.xdg.dataHome}/htpc/kodi/htpc";
   };
 
   # HOME MANAGER USER AGENT
