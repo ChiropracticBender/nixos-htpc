@@ -9,7 +9,7 @@
     [
       ./hardware-configuration.nix # include hardware scan
       ./channels.nix # add channels to builds
-      <home-manager/nixos-darwin> #home manager module CORE
+      <home-manager/nix-darwin> #home manager module CORE
     ];
 
   # Bootloader.
