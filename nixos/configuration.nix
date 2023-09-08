@@ -15,7 +15,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  home.stateVersion = "23.05"; # home manager state version
+  home-manager.stateVersion = "23.05"; # home manager state version
 
   networking.hostName = "nixos-htpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
