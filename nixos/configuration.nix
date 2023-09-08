@@ -9,13 +9,12 @@
     [
       ./hardware-configuration.nix # include hardware scan
       ./channels.nix # add channels to builds
-      <home-manager/nix-darwin> #home manager module CORE
+#      <home-manager/nixos-darwin> #home manager module CORE
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  home.stateVersion = "18.09"; #home manager state version
 
   networking.hostName = "nixos-htpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -89,13 +88,13 @@
     ];
   };
 
-  home-manager.users.htpc = { pkgs, ... }: {
-    home.packages = [ 
-      pkgs.atool 
-      pkgs.httpie 
-    ];
-    programs.bash.enable = true;
-  };
+  # home-manager.users.htpc = { pkgs, ... }: {
+  #   home.packages = [ 
+  #     pkgs.atool 
+  #     pkgs.httpie 
+  #   ];
+  #   programs.bash.enable = true;
+  # };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
