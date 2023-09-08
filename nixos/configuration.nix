@@ -16,7 +16,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-tv"; # Define your hostname.
+  networking.hostName = "nixos-htpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -86,6 +86,9 @@
       microsoft-edge
       kodi-wayland
     ];
+  home-manager.users.eve = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+    programs.kodi.datadir = "${config.xdg.dataHome}/htpc/kodi/htpc"
   };
 
   # HOME MANAGER USER AGENT
