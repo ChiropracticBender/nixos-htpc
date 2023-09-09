@@ -1,2 +1,0 @@
-# SYMLINK SYSTEM
-
