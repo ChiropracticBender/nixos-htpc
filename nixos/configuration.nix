@@ -7,7 +7,7 @@
 {
   imports = 
     [
-      ./hardware-configuration.nix # include hardware scan
+      /etc/nixos/hardware-configuration.nix # include hardware scan
       ./channels.nix # add channels to builds
 #      <home-manager/nixos-> #home manager module CORE
     ];
@@ -31,16 +31,23 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+
 
   ###################### KODI LOGIN
   # Desktop Environment.
-  services.xserver.displayManager.defaultSession = "kodi"; #sets kodi as the default launcher 
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.kodi.enable = true; #kodi desktop enviroment (testing wayland login
+  # services.xserver.displayManager.defaultSession = "kodi"; #sets kodi as the default launcher 
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.desktopManager.kodi.enable = true; #kodi desktop enviroment (testing wayland login
+
+  ############# SWITCH TO GNOME ###################
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.defaultSession = "gnome";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "htpc";
+
+
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
   # STAND ALONE APPLICATION
   services.xserver.displayManager.lightdm.autoLogin.timeout = 3;
@@ -107,7 +114,7 @@
 
   services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
     [
-    osmc-skin
+    
     ]);
 
 
