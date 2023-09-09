@@ -23,6 +23,7 @@ sudo cp -r tmp/* /htpc
 
 echo "Copying installer tool to HTPC-Tools"
 sudo cp -r tmp/tools/install.sh /htpc-tools/
+sudo cp -r tmp/tools/links.sh /htpc-tools/
 
 echo "Deleting temp files"
 sudo rm -r tmp
