@@ -46,6 +46,23 @@
   services.xserver.displayManager.defaultSession = "gnome";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "htpc";
+  environment.gnome.excludePackages = (with pkgs; [
+  gnome-photos
+  gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    cheese # webcam tool
+    gnome-music
+    gedit # text editor
+    epiphany # web browser
+    geary # email reader
+    evince # document viewer
+    gnome-characters
+    totem # video player
+    tali # poker game
+    iagno # go game
+    hitori # sudoku game
+    atomix # puzzle game
+  ]);  
 
 
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
@@ -89,6 +106,7 @@
   users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       microsoft-edge
       kodi-wayland
@@ -141,23 +159,5 @@
 
   # UNFREE SOFTWARE ALLOW
   nixpkgs.config.allowUnfree = true;
-
-  environment.gnome.excludePackages = (with pkgs; [
-  gnome-photos
-  gnome-tour
-]) ++ (with pkgs.gnome; [
-  cheese # webcam tool
-  gnome-music
-  gedit # text editor
-  epiphany # web browser
-  geary # email reader
-  evince # document viewer
-  gnome-characters
-  totem # video player
-  tali # poker game
-  iagno # go game
-  hitori # sudoku game
-  atomix # puzzle game
-]);
 
 }
