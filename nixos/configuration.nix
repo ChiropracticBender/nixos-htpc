@@ -51,7 +51,7 @@
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
   # STAND ALONE APPLICATION
   services.xserver.displayManager.lightdm.autoLogin.timeout = 3;
-  services.xserver.desktopManager.plasma5.enable = true;
+#  services.xserver.desktopManager.plasma5.enable = true;
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
