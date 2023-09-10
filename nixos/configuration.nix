@@ -99,6 +99,7 @@
       microsoft-edge
       git
       vscode
+      kodi-wayland
     ];
   };
 
