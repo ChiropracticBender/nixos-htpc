@@ -35,6 +35,3 @@ sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace --impure
 
-# Run System Links
-echo "Applying Syslinks"
-sudo ./links.sh

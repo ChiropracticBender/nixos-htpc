@@ -53,7 +53,6 @@
     cheese # webcam tool
     gnome-music
     gedit # text editor
-    epiphany # web browser
     geary # email reader
     evince # document viewer
     gnome-characters
@@ -109,7 +108,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       microsoft-edge
-      kodi
+      kodi-wayland
     ];
   };
 
@@ -125,15 +124,14 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     pkgs.home-manager
-    kodi-wayland
     openvpn
     pkgs.wget
   ];
 
-  services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
-    [
+  # services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
+  #   [
     
-    ]);
+  #   ]);
 
 
   # Some programs need SUID wrappers, can be configured further or are
