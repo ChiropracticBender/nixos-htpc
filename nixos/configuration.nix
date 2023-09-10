@@ -109,7 +109,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       microsoft-edge
-      kodi-wayland
+      kodi
     ];
   };
 
