@@ -31,15 +31,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-
-
-  ###################### KODI LOGIN
-  # Desktop Environment.
-  # services.xserver.displayManager.defaultSession = "kodi"; #sets kodi as the default launcher 
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.kodi.enable = true; #kodi desktop enviroment (testing wayland login
-
-  ############# SWITCH TO GNOME ###################
+  ############# GNOME KODI ###################
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -61,7 +53,7 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
-  ]);  
+  ]); 
 
 
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
@@ -100,6 +92,7 @@
       git
       vscode
       kodi-wayland
+
     ];
   };
 
@@ -127,6 +120,9 @@
     pkgs.home-manager
     openvpn
     pkgs.wget
+    pkgs.kodiPackages.inputstream-adaptive
+    pkgs.kodiPackages.inputstream-ffmpegdirect
+    pkgs.kodiPackages.inputstream-rtmp
   ];
 
   # services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
