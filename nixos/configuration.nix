@@ -35,7 +35,8 @@
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.defaultSession = "gnome";
+  # services.xserver.desktopManager.kodi.enable = true;
+  # services.xserver.displayManager.defaultSession = "gnome";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "htpc";
   environment.gnome.excludePackages = (with pkgs; [
@@ -95,6 +96,7 @@
     ];
   };
 
+  
   users.users.htpc = {
     isNormalUser = true;
     description = "HTPC";
@@ -129,22 +131,6 @@
     
   #   ]);
 
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
 
   system.stateVersion = "23.05"; # Did you read the comment?
   system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc";
