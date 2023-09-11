@@ -92,7 +92,6 @@
       git
       vscode
       kodi-wayland
-
     ];
   };
 
@@ -120,9 +119,9 @@
     pkgs.home-manager
     openvpn
     pkgs.wget
-    pkgs.kodiPackages.inputstream-adaptive
-    pkgs.kodiPackages.inputstream-ffmpegdirect
-    pkgs.kodiPackages.inputstream-rtmp
+    kodiPackages.inputstream-adaptive
+    kodiPackages.inputstream-ffmpegdirect
+    kodiPackages.inputstream-rtmp
   ];
 
   # services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
