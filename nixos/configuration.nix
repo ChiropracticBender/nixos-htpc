@@ -54,7 +54,6 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
-    xterm
   ]); 
 
 
