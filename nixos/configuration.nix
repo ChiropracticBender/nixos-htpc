@@ -54,6 +54,10 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
+    gnome-maps #maps app
+    simple-scan #scanner app
+    gnome-contacts #contacts app
+    gnome-calendar # calendar
   ]); 
 
 
