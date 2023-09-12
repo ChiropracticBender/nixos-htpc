@@ -83,6 +83,7 @@
     isNormalUser = true;
     description = "developer";
     extraGroups = [ "networkmanager" "wheel" ];
+    password = "tester";
     packages = with pkgs; [
       kate
       epiphany
@@ -98,6 +99,7 @@
     isNormalUser = true;
     description = "HTPC";
     extraGroups = [ "networkmanager" "wheel" ];
+    password = "tvrules";
     packages = with pkgs; [
       microsoft-edge
       kodi
