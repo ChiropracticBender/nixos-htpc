@@ -1,7 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-# test change code vscode
 { inputs, config, pkgs, ... }:
 
 {
@@ -19,10 +18,6 @@
   networking.hostName = "nixos-htpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -35,7 +30,7 @@
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  # services.xserver.desktopManager.kodi.enable = true;
+  services.xserver.desktopManager.kodi.enable = true;
   # services.xserver.displayManager.defaultSession = "gnome";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "htpc";
@@ -58,13 +53,11 @@
     simple-scan #scanner app
     gnome-contacts #contacts app
     gnome-calendar # calendar
+    gnome-calculator
   ]); 
 
 
   # KODI DESKTOP ENVIROMENT (WANT TO SWITCH THIS TO WAYLAND 
-  # STAND ALONE APPLICATION
-  services.xserver.displayManager.lightdm.autoLogin.timeout = 3;
-#  services.xserver.desktopManager.plasma5.enable = true;
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -125,23 +118,18 @@
     pkgs.home-manager
     openvpn
     pkgs.wget
-    kodiPackages.inputstream-adaptive
-    kodiPackages.inputstream-ffmpegdirect
-    kodiPackages.inputstream-rtmp
+    cmake
+    git
+    python39Full
   ];
 
-  # services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; 
-  #   [
-    
-  #   ]);
-
+  services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ 
+    osmc-skin 
+  ]);
 
   system.stateVersion = "23.05"; # Did you read the comment?
   system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc";
-  # NIX FLAKES
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # UNFREE SOFTWARE ALLOW
-  nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # NIX FLAKES
+  nixpkgs.config.allowUnfree = true; # UNFREE SOFTWARE ALLOW
 
 }
