@@ -124,7 +124,9 @@
   ];
 
   services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ 
-    osmc-skin 
+    inputstream-adaptive
+    inputstream-ffmpegdirect
+    inputstream-rtmp
   ]);
 
   system.stateVersion = "23.05"; # Did you read the comment?
