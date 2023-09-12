@@ -127,6 +127,7 @@
     inputstream-adaptive
     inputstream-ffmpegdirect
     inputstream-rtmp
+    pvr-iptvsimple
   ]);
 
   system.stateVersion = "23.05"; # Did you read the comment?
