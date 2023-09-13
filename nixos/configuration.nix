@@ -102,7 +102,7 @@
     password = "tvrules";
     packages = with pkgs; [
       microsoft-edge
-      kodi
+      kodi-wayland
     ];
   };
 
@@ -123,6 +123,7 @@
     cmake
     git
     python39Full
+    git-lfs
   ];
 
   services.xserver.desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ 
@@ -136,5 +137,7 @@
   system.autoUpgrade.flake = "github:chiropracticbender/nixos-htpc";
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # NIX FLAKES
   nixpkgs.config.allowUnfree = true; # UNFREE SOFTWARE ALLOW
+
+  boot.plymouth.enable = true; #silent boot test
 
 }
