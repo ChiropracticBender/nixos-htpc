@@ -4,7 +4,7 @@ echo "deleting kodi directory"
 sudo rm -r /home/htpc/.kodi
 
 ## RUN INSTALL SH
-echo" Calling install.sh
+echo "Calling install.sh"
 source ./install.sh
 
 echo "Setting default files inside .kodi for HTPC user"
