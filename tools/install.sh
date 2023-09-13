@@ -26,7 +26,7 @@ sudo cp -r tmp/tools/install.sh /htpc-tools/
 echo "Copied install.sh"
 sudo cp -r tmp/tools/links.sh /htpc-tools/
 echo "Copied links.sh"
-sudo cp -r tmp/reset-kodi.sh /htpc-tools
+sudo cp -r tmp/tools/reset-kodi.sh /htpc-tools
 echo "Copied reset-kodi.sh"
 echo "Apply chmod +x"
 sudo chmod +x /htpc-tools/install.sh
