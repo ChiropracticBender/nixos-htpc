@@ -29,9 +29,9 @@ echo "Copied links.sh"
 sudo cp -r tmp/reset-kodi.sh /htpc-tools
 echo "Copied reset-kodi.sh"
 echo "Apply chmod +x"
-sudo chmod +x /htpc-toosl/install.sh
-sudo chmod +x /htpc-toosl/links.sh
-sudo chmod +x /htpc-toosl/reset-kodi.sh
+sudo chmod +x /htpc-tools/install.sh
+sudo chmod +x /htpc-tools/links.sh
+sudo chmod +x /htpc-tools/reset-kodi.sh
 
 echo "Deleting temp files"
 sudo rm -r tmp
