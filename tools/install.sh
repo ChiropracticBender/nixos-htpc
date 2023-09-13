@@ -23,12 +23,15 @@ sudo cp -r tmp/* /htpc
 
 echo "Copying installer tool to HTPC-Tools"
 sudo cp -r tmp/tools/install.sh /htpc-tools/
+echo "Copied install.sh"
 sudo cp -r tmp/tools/links.sh /htpc-tools/
+echo "Copied links.sh"
 sudo cp -r tmp/reset-kodi.sh /htpc-tools
-sudo cd /htpc-toosl
-sudo chmod +x install.sh
-sudo chmod +x links.sh
-sudo chmod +x reset-kodi.sh
+echo "Copied reset-kodi.sh"
+echo "Apply chmod +x"
+sudo chmod +x /htpc-toosl/install.sh
+sudo chmod +x /htpc-toosl/links.sh
+sudo chmod +x /htpc-toosl/reset-kodi.sh
 
 echo "Deleting temp files"
 sudo rm -r tmp
