@@ -43,3 +43,8 @@ sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace --impure
 
+echo "Copying kodi DigiWizard to HTPC Account"
+sudo cp -r /htpc/kodi/addons/plugin.program.digiwizard /home/htpc/.kodi/addons
+
+echo "Copying kodi Master Profile to HTPC Account"
+sudo cp -r /htpc/kodi/userdata/profile.xml /home/htpc/.kodi/userdata/
