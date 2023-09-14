@@ -47,4 +47,4 @@ echo "Copying kodi DigiWizard to HTPC Account"
 sudo cp -r /htpc/kodi/addons/plugin.program.digiwizard /home/htpc/.kodi/addons
 
 echo "Copying kodi Master Profile to HTPC Account"
-sudo cp -r /htpc/kodi/userdata/profiles.xml /home/htpc/.kodi/userdata/
+sudo cp -r /htpc/kodi/userdata/profiles.xml /home/htpc/.kodi/userdata
