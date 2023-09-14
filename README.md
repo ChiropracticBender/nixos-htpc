@@ -6,3 +6,6 @@ Developing as easy to use home theatre package for Nix-OS users which incorporat
 ## HIGH CHANCE OF BREAKABLITY AS I TINKER WITH THIS CONCEPT
 
 Check the wiki for documentation.
+
+
+-[] Easy install
