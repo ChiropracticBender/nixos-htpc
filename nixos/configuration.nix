@@ -95,9 +95,10 @@
   };
 
   
-  users.users.htpc = {
+  users.extraUsers.htpc = {
     isNormalUser = true;
     description = "HTPC";
+    home = "/home/htpc";
     extraGroups = [ "networkmanager" "wheel" ];
     password = "tvrules";
     packages = with pkgs; [
@@ -106,13 +107,41 @@
     ];
   };
 
-  # home-manager.users.htpc = { pkgs, ... }: {
-  #   home.packages = [ 
-  #     pkgs.atool 
-  #     pkgs.httpie 
-  #   ];
-  #   programs.bash.enable = true;
-  # };
+  home-manager.users.htpc = {
+    home.stateVersion = "22.05";
+    home.file.digiwizard = {
+      source = "/htpc/kodi/addons/plugin.program.digiwizard";
+      target = "/.kodi/addons/plugin.program.digiwizard";
+    };
+    home.file.digiwizard-certifi = {
+      source = "/htpc/kodi/addons/script.module.certifi";
+      target = "/.kodi/addons/script.module.certifi";
+    };
+    home.file.digiwizard-chardet = {
+      source = "/htpc/kodi/addons/script.module.chardet";
+      target = "/.kodi/addons/script.module.chardet";
+    };
+    home.file.digiwizard-idna = {
+      source = "/htpc/kodi/addons/script.module.idna";
+      target = "/.kodi/addons/script.module.idna";
+    };    
+    home.file.digiwizard-requests = {
+      source = "/htpc/kodi/addons/script.module.requests";
+      target = "/.kodi/addons/script.module.requests";
+    };
+    home.file.digiwizard-six = {
+      source = "/htpc/kodi/addons/script.module.six";
+      target = "/.kodi/addons/script.module.six";
+    };
+    home.file.digiwizard-urllib3 = {
+      source = "/htpc/kodi/addons/script.module.urllib3";
+      target = "/.kodi/addons/script.module.urllib3";
+    };     
+    home.file.profiles = {
+      source = "/htpc/kodi/userdata/profiles.xml";
+      target = "/.kodi/userdata/profiles.xml";
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
