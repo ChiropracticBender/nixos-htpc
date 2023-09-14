@@ -8,7 +8,7 @@ version="0.1"
 #nix-shell -p git
 
 echo  "Adding home manger channel"
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz #home-manager
 sudo nix-channel --update
 
 echo  "Making/Checking htpc dir"
@@ -43,8 +43,8 @@ sudo cp -r /etc/nixos/hardware-configuration.nix /htpc/nixos
 echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace --impure
 
-echo "Copying kodi DigiWizard to HTPC Account"
-sudo cp -r /htpc/kodi/addons/plugin.program.digiwizard /home/htpc/.kodi/addons
+# echo "Copying kodi DigiWizard to HTPC Account"
+# sudo cp -r /htpc/kodi/addons/plugin.program.digiwizard /home/htpc/.kodi/addons
 
-echo "Copying kodi Master Profile to HTPC Account"
-sudo cp -r /htpc/kodi/userdata/profiles.xml /home/htpc/.kodi/userdata
+# echo "Copying kodi Master Profile to HTPC Account"
+# sudo cp -r /htpc/kodi/userdata/profiles.xml /home/htpc/.kodi/userdata

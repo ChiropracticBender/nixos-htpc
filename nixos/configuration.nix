@@ -8,7 +8,7 @@
     [
       /etc/nixos/hardware-configuration.nix # include hardware scan
       ./channels.nix # add channels to builds
-#      <home-manager/nixos-> #home manager module CORE
+      <home-manager/nixos-> #home manager module CORE
     ];
 
   # Bootloader.
@@ -138,6 +138,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # NIX FLAKES
   nixpkgs.config.allowUnfree = true; # UNFREE SOFTWARE ALLOW
 
-  boot.plymouth.enable = true; #silent boot test
+  boot.plymouth.enable = true; #silent boot Step 2
 
 }
