@@ -1,7 +1,11 @@
 ## Reset KODI DIRECTORY
 
-echo "delete profile HTPC"
+echo "delete profile HTPC userdel"
 sudo userdel -r htpc
+echo "Deleting nix GCRoots HTPC"
+rm -r /nix/var/nix/gcroots/per-user/htpc
+echo "Deleting Nix Profile HTPC"
+rm -r /nix/var/nix/profiles/per-user/htpc
 
 ## RUN INSTALL SH
 echo "Calling install.sh"
