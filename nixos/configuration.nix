@@ -83,7 +83,7 @@
     isNormalUser = true;
     description = "developer";
     extraGroups = [ "networkmanager" "wheel" ];
-    password = "tester";
+    password = "developer";
     packages = with pkgs; [
       kate
       epiphany
