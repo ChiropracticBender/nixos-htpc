@@ -8,7 +8,7 @@ version="0.1"
 #nix-shell -p git
 
 echo  "Adding home manger channel"
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz #home-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
 sudo nix-channel --update
 
 echo  "Making/Checking htpc dir"
