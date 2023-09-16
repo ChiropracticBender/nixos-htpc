@@ -46,7 +46,7 @@ do
             break
             ;;
         "Legacy Boot (Non Secure Boot)")
-            sudo sed -i 's/bootloader-uefi/bootloader-efi.nix/g' /htpc/nixos/nixos/configuration.nix
+            sudo sed -i 's/bootloader-uefi/bootloader-efi.nix/g' /htpc/nixos/configuration.nix
             break
             ;;
         "Quit")
