@@ -42,11 +42,11 @@ select opt in "${options[@]}"
 do
     case $opt in
         "UEFI (Secure Boot)")
-            sudo sed -i 's/boorloader-uefi.nix/bootloader-uefi.nix/g' /htpc/nixos/configuration.nix
+            sudo sed -i 's/boorloader-uefi/bootloader-uefi/g' /htpc/nixos/configuration.nix
             break
             ;;
         "Legacy Boot (Non Secure Boot)")
-            sudo sed -i 's/bootloader-uefi/bootloader-efi.nix/g' /htpc/nixos/configuration.nix
+            sudo sed -i 's/bootloader-uefi/bootloader-efi/g' /htpc/nixos/configuration.nix
             break
             ;;
         "Quit")
