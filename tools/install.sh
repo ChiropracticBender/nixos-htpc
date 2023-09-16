@@ -1,23 +1,23 @@
 ## UPDATE SYSTEM
 version="0.1"
 
-PS3='Please enter your choice: '
-options=("UEFI (Secure Boot)" "Legacy Boot (Non Secure Boot)" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "UEFI (Secure Boot)")
-            sed -i 's/bootloadertype/bootloader-uefi.nix/g' ../nixos/configuration.nix
-            ;;
-        "Legacy Boot (Non Secure Boot)")
-            sed -i 's/bootloadertype/bootloader-efi.nix/g' ../nixos/configuration.nix
-            ;;
-        "Quit")
-            exit
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done
+# PS3='Please enter your choice: '
+# options=("UEFI (Secure Boot)" "Legacy Boot (Non Secure Boot)" "Quit")
+# select opt in "${options[@]}"
+# do
+#     case $opt in
+#         "UEFI (Secure Boot)")
+#             sed -i 's/bootloadertype/bootloader-uefi.nix/g' ../nixos/configuration.nix
+#             ;;
+#         "Legacy Boot (Non Secure Boot)")
+#             sed -i 's/bootloadertype/bootloader-efi.nix/g' ../nixos/configuration.nix
+#             ;;
+#         "Quit")
+#             exit
+#             ;;
+#         *) echo "invalid option $REPLY";;
+#     esac
+# done
 
 #echo "Cleaning HTPC dir"
 #sudo rm -r /htpc

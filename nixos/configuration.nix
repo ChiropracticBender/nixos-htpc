@@ -9,20 +9,8 @@
       /etc/nixos/hardware-configuration.nix # include hardware scan
       ./channels.nix # add channels to builds
       <home-manager/nixos> #home manager module CORE
+      ./bootloader-uefi.nix # Bootloader.
     ];
-
-  # Bootloader.
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
-    };
-    grub = {
-      efiSupport = true;
-      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
-      device = "nodev";
-    };
-  };
 
   networking.hostName = "nixos-htpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
