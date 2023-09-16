@@ -42,6 +42,3 @@ echo "Applying Updates to HTPC"
 sudo nixos-rebuild switch --flake /htpc/#NixOSHTPC --show-trace --impure
 
 # home manager will take over kodi build
-
-echo "Executing nix os garbage collection"
-nix-collect-garbage
