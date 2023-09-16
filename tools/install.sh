@@ -1,5 +1,5 @@
 ## UPDATE SYSTEM
-version="0.1"
+# version="0.1"
 
 # PS3='Please enter your choice: '
 # options=("UEFI (Secure Boot)" "Legacy Boot (Non Secure Boot)" "Quit")
